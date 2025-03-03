@@ -7,4 +7,12 @@
 6. In Web.java, import the following:
 ``` java
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;```
+import org.openqa.selenium.edge.EdgeDriver;
+```
+7. Within the class create a psvm and set the property in System for the driver directory
+8. Create an instance of WebDriver using the imported Edge Driver
+```java
+        System.setProperty("webdriver.edge.driver", "C:/Users/DiptikaDevi/Downloads/edgedriver_win64/msedgedriver.exe");
+
+        WebDriver driver = new EdgeDriver();
+```
