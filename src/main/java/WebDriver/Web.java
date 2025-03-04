@@ -21,6 +21,9 @@ public class Web {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            // close browser
+            driver.quit();
         }
     }
 }
