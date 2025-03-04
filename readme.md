@@ -18,3 +18,29 @@ import org.openqa.selenium.edge.EdgeDriver;
 ```
 9. Create a navigation to the site/app using driver.get()
 10. Write the logic 
+Now we have communication between the code and the site.
+Here is the Web.java so far:
+```java
+package WebDriver;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class Web {
+    public static void main(String[] args) {
+        // System property for EdgeDriver, can use any other browser driver here
+        System.setProperty("webdriver.edge.driver", "C:/Users/DiptikaDevi/Downloads/edgedriver_win64/msedgedriver.exe");
+
+        WebDriver driver = new EdgeDriver();
+
+        // Site to open in the driver
+        driver.get("https://www.geeksforgeeks.org/");
+
+        // logic
+        String pageTitle = driver.getTitle();
+        System.out.println("Page Title: " + pageTitle);
+    }
+}
+
+```
+Next steps are to account for exceptions
