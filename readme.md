@@ -16,3 +16,5 @@ import org.openqa.selenium.edge.EdgeDriver;
 
         WebDriver driver = new EdgeDriver();
 ```
+9. Create a navigation to the site/app using driver.get()
+10. Write the logic 
