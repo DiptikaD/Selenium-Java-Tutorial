@@ -9,5 +9,12 @@ public class Web {
         System.setProperty("webdriver.edge.driver", "C:/Users/DiptikaDevi/Downloads/edgedriver_win64/msedgedriver.exe");
 
         WebDriver driver = new EdgeDriver();
+
+        // Site to open in the driver
+        driver.get("https://www.geeksforgeeks.org/");
+
+        // logic
+        String pageTitle = driver.getTitle();
+        System.out.println("Page Title: " + pageTitle);
     }
 }
