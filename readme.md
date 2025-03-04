@@ -44,3 +44,18 @@ public class Web {
 
 ```
 Next steps are to account for exceptions
+11. Wrap the site + logic in a try, catch with an InterruptedException
+12. The JDK doesn't like the Exception, so we add at the end of the try block a Thread.sleep 
+```java
+try {
+            driver.get("https://www.geeksforgeeks.org/");
+            
+            String pageTitle = driver.getTitle();
+            System.out.println("Page Title: " + pageTitle);
+
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+```
+13. Finally add a Finally with a driver.quit() to exit the browser
